@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sio's • Portfolio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+
+<body
+    id="top"
+    class="min-h-screen overflow-x-hidden bg-[#18050a] font-['Inter'] text-white"
+>
+
+
+    <!-- =========================================================
+         BACKGROUND
+    ========================================================== -->
+
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+
+        <!-- Maroon glow -->
+        <div
+            class="absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#8b1e3f]/30 blur-[120px]"
+        ></div>
+
+        <div
+            class="absolute -right-40 top-[40%] h-96 w-96 rounded-full bg-[#a52a4c]/20 blur-[120px]"
+        ></div>
+
+        <div
+            class="absolute bottom-0 left-[35%] h-96 w-96 rounded-full bg-[#641329]/30 blur-[130px]"
+        ></div>
+
+        <!-- Subtle grid -->
+        <div
+            class="absolute inset-0 opacity-[0.035]"
+            style="
+                background-image:
+                    linear-gradient(rgba(255,255,255,.5) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,.5) 1px, transparent 1px);
+                background-size: 45px 45px;
+            "
+        ></div>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         NAVBAR
+    ========================================================== -->
+
+    <nav class="relative z-50 px-4 pt-4">
+
+        <div
+            class="mx-auto max-w-6xl rounded-2xl border border-white/10 bg-white/[0.06] shadow-2xl shadow-black/30 backdrop-blur-2xl"
+        >
+
+            <div class="flex items-center justify-between px-5 py-4">
+
+                <!-- Logo -->
+
+                <a
+                    href="#"
+                    class="flex items-center gap-3"
+                >
+
+                    <div
+                        class="h-11 w-11 overflow-hidden rounded-full border border-white/20 bg-[#641329] p-[2px]"
+                    >
+
+                        <img
+                            src="profile.jpg"
+                            alt="Daniel Mulay"
+                            class="h-full w-full rounded-full object-cover"
+                        >
+
+                    </div>
+
+                    <div>
+
+                        <h2 class="font-bold tracking-tight">
+                            Sio's
+                        </h2>
+
+                        <p
+                            class="font-['JetBrains_Mono'] text-[10px] tracking-widest text-[#d58ba0]"
+                        >
+                            DEVELOPER
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- Desktop navigation -->
+
+                <div class="hidden items-center gap-8 md:flex">
+
+                    <a
+                        href="#about"
+                        class="text-sm text-[#c9aab4] transition hover:text-white"
+                    >
+                        About
+                    </a>
+
+                    <a
+                        href="#skills"
+                        class="text-sm text-[#c9aab4] transition hover:text-white"
+                    >
+                        Skills
+                    </a>
+
+                    <a
+                        href="#projects"
+                        class="text-sm text-[#c9aab4] transition hover:text-white"
+                    >
+                        Projects
+                    </a>
+
+                    <a
+                        href="#contact"
+                        class="text-sm text-[#c9aab4] transition hover:text-white"
+                    >
+                        Contact
+                    </a>
+
+                    <a
+                        href="#contact"
+                        class="rounded-xl border border-white/10 bg-gradient-to-br from-[#a52a4c] to-[#641329] px-5 py-2.5 text-sm font-semibold shadow-lg shadow-[#641329]/30 transition hover:-translate-y-1 hover:shadow-xl hover:shadow-[#8b1e3f]/30"
+                    >
+                        Let's Talk
+                    </a>
+
+                </div>
+
+
+                <!-- Mobile button -->
+
+                <button
+                    id="menuButton"
+                    type="button"
+                    aria-label="Open menu"
+                    class="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xl md:hidden"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+
+            <!-- Mobile menu -->
+
+            <div
+                id="mobileMenu"
+                class="hidden border-t border-white/10 px-5 pb-5 md:hidden"
+            >
+
+                <div class="flex flex-col gap-2 pt-4">
+
+                    <a
+                        href="#about"
+                        class="mobile-link rounded-xl px-4 py-3 text-[#c9aab4] transition hover:bg-white/5 hover:text-white"
+                    >
+                        About
+                    </a>
+
+                    <a
+                        href="#skills"
+                        class="mobile-link rounded-xl px-4 py-3 text-[#c9aab4] transition hover:bg-white/5 hover:text-white"
+                    >
+                        Skills
+                    </a>
+
+                    <a
+                        href="#projects"
+                        class="mobile-link rounded-xl px-4 py-3 text-[#c9aab4] transition hover:bg-white/5 hover:text-white"
+                    >
+                        Projects
+                    </a>
+
+                    <a
+                        href="#contact"
+                        class="mobile-link rounded-xl px-4 py-3 text-[#c9aab4] transition hover:bg-white/5 hover:text-white"
+                    >
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+
+    <main>
+
+        <section
+            class="flex min-h-screen items-center px-6 pb-20 pt-20"
+        >
+
+            <div class="mx-auto w-full max-w-6xl">
+
+                <div class="grid items-center gap-16 lg:grid-cols-2">
+
+
+                    <!-- Text -->
+
+                    <div>
+
+                        <p
+                            class="mb-5 font-['JetBrains_Mono'] text-xs tracking-[0.25em] text-[#d05a7c]"
+                        >
+                            // HELLO, I'M
+                        </p>
+
+
+                        <h1
+                            class="text-5xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
+                        >
+
+                            Daniel
+
+                            <span
+                                class="bg-gradient-to-r from-white via-[#f0b4c3] to-[#a52a4c] bg-clip-text text-transparent"
+                            >
+                                Mulay
+                            </span>
+
+                        </h1>
+
+
+                        <div class="mt-6 flex items-center gap-3">
+
+                            <div class="h-px w-10 bg-[#a52a4c]"></div>
+
+                            <span
+                                class="font-['JetBrains_Mono'] text-xs tracking-widest text-[#c9aab4]"
+                            >
+                                WEB DEVELOPER
+                            </span>
+
+                        </div>
+
+
+                        <p
+                            id="scramble-text"
+                            class="mt-7 max-w-xl text-lg leading-8 text-[#c9aab4] sm:text-xl"
+                        >
+                            A developer who enjoys creating websites
+                            and building modern digital experiences.
+                        </p>
+
+
+                        <!-- Buttons -->
+
+                        <div class="mt-9 flex flex-wrap gap-4">
+
+                            <a
+                                href="#projects"
+                                class="rounded-xl border border-white/10 bg-gradient-to-br from-[#a52a4c] to-[#641329] px-7 py-3.5 font-semibold shadow-xl shadow-[#641329]/30 transition hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#8b1e3f]/30"
+                            >
+                                View My Work
+                            </a>
+
+                            <a
+                                href="#contact"
+                                class="rounded-xl border border-white/10 bg-white/[0.05] px-7 py-3.5 font-semibold backdrop-blur-xl transition hover:-translate-y-1 hover:border-[#a52a4c]/50 hover:bg-[#a52a4c]/10"
+                            >
+                                Contact Me
+                            </a>
+
+                        </div>
+
+
+                        <!-- Stats -->
+
+                        <div class="mt-12 flex gap-10">
+
+                            <div>
+
+                                <p class="text-2xl font-bold">
+                                    10+
+                                </p>
+
+                                <p
+                                    class="mt-1 font-['JetBrains_Mono'] text-[10px] tracking-widest text-[#80606b]"
+                                >
+                                    PROJECTS
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <p class="text-2xl font-bold">
+                                    5+
+                                </p>
+
+                                <p
+                                    class="mt-1 font-['JetBrains_Mono'] text-[10px] tracking-widest text-[#80606b]"
+                                >
+                                    TECHNOLOGIES
+                                </p>
+
+                            </div>
+
+
+                            <div>
+
+                                <p class="text-2xl font-bold">
+                                    ∞
+                                </p>
+
+                                <p
+                                    class="mt-1 font-['JetBrains_Mono'] text-[10px] tracking-widest text-[#80606b]"
+                                >
+                                    LEARNING
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Profile -->
+
+                    <div class="flex justify-center lg:justify-end">
+
+                        <div class="relative">
+
+
+                            <!-- Glow -->
+
+                            <div
+                                class="absolute inset-0 rounded-full bg-[#a52a4c]/30 blur-[100px]"
+                            ></div>
+
+
+                            <!-- Image -->
+
+                            <div
+                                class="relative h-72 w-72 rounded-full bg-gradient-to-br from-[#d05a7c] via-[#641329] to-[#a52a4c] p-[5px] shadow-2xl shadow-[#8b1e3f]/30 sm:h-80 sm:w-80 lg:h-[410px] lg:w-[410px]"
+                            >
+
+                                <img
+                                    src="profile.jpg"
+                                    alt="Daniel Mulay"
+                                    class="h-full w-full rounded-full object-cover"
+                                >
+
+                            </div>
+
+
+                            <!-- Floating glass card -->
+
+                            <div
+                                class="absolute -bottom-5 -left-5 rounded-2xl border border-white/10 bg-white/[0.07] px-5 py-4 shadow-2xl backdrop-blur-2xl"
+                            >
+
+                                <p
+                                    class="font-['JetBrains_Mono'] text-[10px] tracking-widest text-[#d05a7c]"
+                                >
+                                    STATUS
+                                </p>
+
+                                <p class="mt-1 font-semibold">
+                                    Building & Learning
+                                </p>
+
+                            </div>
+
+
+                            <div
+                                class="absolute -right-5 -top-5 hidden rounded-2xl border border-white/10 bg-white/[0.07] px-5 py-4 shadow-2xl backdrop-blur-2xl sm:block"
+                            >
+
+                                <p
+                                    class="font-['JetBrains_Mono'] text-xs text-[#d05a7c]"
+                                >
+                                    &lt;/&gt;
+                                </p>
+
+                                <p class="mt-1 text-sm text-[#c9aab4]">
+                                    Full Stack
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================================
+             ABOUT
+        ========================================================== -->
+
+        <section
+            id="about"
+            class="scroll-reveal translate-y-12 px-6 py-24 opacity-0 transition-all duration-1000"
+        >
+
+            <div class="mx-auto max-w-6xl">
+
+                <p
+                    class="font-['JetBrains_Mono'] text-xs tracking-[0.25em] text-[#d05a7c]"
+                >
+                    01 / ABOUT
+                </p>
+
+                <h2
+                    class="mt-3 text-4xl font-bold tracking-tight sm:text-5xl"
+                >
+                    A little about me.
+                </h2>
+
+
+                <div class="mt-12 grid gap-6 lg:grid-cols-2">
+
+
+                    <div
+                        class="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.055] p-8 shadow-2xl backdrop-blur-2xl"
+                    >
+
+                        <p class="text-lg leading-8 text-[#c9aab4]">
+                            I'm Daniel Mulay, a developer who enjoys
+                            turning ideas into functional digital
+                            experiences.
+                        </p>
+
+                        <p class="mt-5 text-lg leading-8 text-[#c9aab4]">
+                            I enjoy creating websites, management
+                            systems, database applications and
+                            experimental projects using different
+                            technologies.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.055] p-8 shadow-2xl backdrop-blur-2xl"
+                    >
+
+                        <div class="flex items-center gap-4">
+
+                            <div
+                                class="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-[#a52a4c]/15 text-xl"
+                            >
+                                ⚡
+                            </div>
+
+                            <div>
+
+                                <h3 class="text-lg font-bold">
+                                    What I Build
+                                </h3>
+
+                                <p class="text-sm text-[#80606b]">
+                                    Practical software solutions
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="mt-7 space-y-4">
+
+                            <p class="text-[#c9aab4]">
+                                <span class="text-[#d05a7c]">→</span>
+                                Business management systems
+                            </p>
+
+                            <p class="text-[#c9aab4]">
+                                <span class="text-[#d05a7c]">→</span>
+                                Web applications
+                            </p>
+
+                            <p class="text-[#c9aab4]">
+                                <span class="text-[#d05a7c]">→</span>
+                                Database systems
+                            </p>
+
+                            <p class="text-[#c9aab4]">
+                                <span class="text-[#d05a7c]">→</span>
+                                API-powered applications
+                            </p>
+
+                            <p class="text-[#c9aab4]">
+                                <span class="text-[#d05a7c]">→</span>
+                                Python & computer vision
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================================
+             SKILLS
+        ========================================================== -->
+
+        <section
+            id="skills"
+            class="scroll-reveal translate-y-12 px-6 py-24 opacity-0 transition-all duration-1000"
+        >
+
+            <div class="mx-auto max-w-6xl">
+
+                <p
+                    class="font-['JetBrains_Mono'] text-xs tracking-[0.25em] text-[#d05a7c]"
+                >
+                    02 / SKILLS
+                </p>
+
+                <h2
+                    class="mt-3 text-4xl font-bold tracking-tight sm:text-5xl"
+                >
+                    Technologies I use.
+                </h2>
+
+
+                <div
+                    class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"
+                >
+
+                    <!-- HTML -->
+
+                    <div
+                        class="group rounded-2xl border border-white/10 bg-white/[0.05] p-6 shadow-xl backdrop-blur-2xl transition hover:-translate-y-2 hover:border-[#a52a4c]/40 hover:bg-[#a52a4c]/10"
+                    >
+
+                        <div class="text-3xl">
+                            🌐
+                        </div>
+
+                        <h3 class="mt-5 font-bold">
+                            HTML / CSS
+                        </h3>
+
+                        <p class="mt-2 text-sm text-[#80606b]">
+                            Responsive and modern interfaces.
+                        </p>
+
+                    </div>
+
+
+                    <!-- JS -->
+
+                    <div
+                        class="group rounded-2xl border border-white/10 bg-white/[0.05] p-6 shadow-xl backdrop-blur-2xl transition hover:-translate-y-2 hover:border-[#a52a4c]/40 hover:bg-[#a52a4c]/10"
+                    >
+
+                        <div class="text-3xl">
+                            ⚡
+                        </div>
+
+                        <h3 class="mt-5 font-bold">
+                            JavaScript
+                        </h3>
+
+                        <p class="mt-2 text-sm text-[#80606b]">
+                            Interactive web applications.
+                        </p>
+
+                    </div>
+
+
+                    <!-- PHP -->
+
+                    <div
+                        class="group rounded-2xl border border-white/10 bg-white/[0.05] p-6 shadow-xl backdrop-blur-2xl transition hover:-translate-y-2 hover:border-[#a52a4c]/40 hover:bg-[#a52a4c]/10"
+                    >
+
+                        <div class="text-3xl">
+                            🐘
+                        </div>
+
+                        <h3 class="mt-5 font-bold">
+                            PHP / MySQL
+                        </h3>
+
+                        <p class="mt-2 text-sm text-[#80606b]">
+                            Backend and database systems.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Python -->
+
+                    <div
+                        class="group rounded-2xl border border-white/10 bg-white/[0.05] p-6 shadow-xl backdrop-blur-2xl transition hover:-translate-y-2 hover:border-[#a52a4c]/40 hover:bg-[#a52a4c]/10"
+                    >
+
+                        <div class="text-3xl">
+                            🐍
+                        </div>
+
+                        <h3 class="mt-5 font-bold">
+                            Python
+                        </h3>
+
+                        <p class="mt-2 text-sm text-[#80606b]">
+                            Automation, APIs and computer vision.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================================
+             PROJECTS
+        ========================================================== -->
+
+        <section
+            id="projects"
+            class="scroll-reveal translate-y-12 px-6 py-24 opacity-0 transition-all duration-1000"
+        >
+
+            <div class="mx-auto max-w-6xl">
+
+                <p
+                    class="font-['JetBrains_Mono'] text-xs tracking-[0.25em] text-[#d05a7c]"
+                >
+                    03 / PROJECTS
+                </p>
+
+                <h2
+                    class="mt-3 text-4xl font-bold tracking-tight sm:text-5xl"
+                >
+                    Things I've built.
+                </h2>
+
+
+                <div
+                    class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+                >
+
+
+                    <!-- Payroll -->
+
+                    <article
+                        class="project-card group translate-y-10 rounded-3xl border border-white/10 bg-white/[0.055] p-7 opacity-0 shadow-2xl backdrop-blur-2xl transition-all duration-700 hover:-translate-y-2 hover:border-[#a52a4c]/40"
+                    >
+
+                        <div
+                            class="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-[#a52a4c]/15 text-2xl"
+                        >
+                            💰
+                        </div>
+
+                        <p
+                            class="mt-6 font-['JetBrains_Mono'] text-[10px] tracking-[0.2em] text-[#d05a7c]"
+                        >
+                            PROJECT 01
+                        </p>
+
+                        <h3 class="mt-2 text-xl font-bold">
+                            Payroll System
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-6 text-[#80606b]">
+                            Employee payroll system for managing
+                            salaries, deductions, attendance and
+                            payroll records.
+                        </p>
+
+                        <div class="mt-5 flex flex-wrap gap-2">
+
+                            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">
+                                PHP
+                            </span>
+
+                            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">
+                                MySQL
+                            </span>
+
+                            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">
+                                JavaScript
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Library -->
+
+                    <article
+                        class="project-card group translate-y-10 rounded-3xl border border-white/10 bg-white/[0.055] p-7 opacity-0 shadow-2xl backdrop-blur-2xl transition-all duration-700 hover:-translate-y-2 hover:border-[#a52a4c]/40"
+                    >
+
+                        <div
+                            class="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-[#a52a4c]/15 text-2xl"
+                        >
+                            📚
+                        </div>
+
+                        <p
+                            class="mt-6 font-['JetBrains_Mono'] text-[10px] tracking-[0.2em] text-[#d05a7c]"
+                        >
+                            PROJECT 02
+                        </p>
+
+                        <h3 class="mt-2 text-xl font-bold">
+                            Library Management System
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-6 text-[#80606b]">
+                            System for managing books, borrowers,
+                            returns, availability and library
+                            records.
+                        </p>
+
+                        <div class="mt-5 flex flex-wrap gap-2">
+
+                            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">
+                                PHP
+                            </span>
+
+                            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">
+                                MySQL
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- POS -->
+
+                    <article
+                        class="project-card group translate-y-10 rounded-3xl border border-white/10 bg-white/[0.055] p-7 opacity-0 shadow-2xl backdrop-blur-2xl transition-all duration-700 hover:-translate-y-2 hover:border-[#a52a4c]/40"
+                    >
+
+                        <div
+                            class="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-[#a52a4c]/15 text-2xl"
+                        >
+                            🧾
+                        </div>
+
+                        <p
+                            class="mt-6 font-['JetBrains_Mono'] text-[10px] tracking-[0.2em] text-[#d05a7c]"
+                        >
+                            PROJECT 03
+                        </p>
+
+                        <h3 class="mt-2 text-xl font-bold">
+                            Point of Sale System
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-6 text-[#80606b]">
+                            POS application for products, transactions,
+                            inventory and sales management.
+                        </p>
+
+                        <div class="mt-5 flex flex-wrap gap-2">
+
+                            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">
+                                PHP
+                            </span>
+
+                            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">
+                                MySQL
+                            </span>
+
+                            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">
+                                Tailwind
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Weather -->
+
+                    <article
+                        class="project-card group translate-y-10 rounded-3xl border border-white/10 bg-white/[0.055] p-7 opacity-0 shadow-2xl backdrop-blur-2xl transition-all duration-700 hover:-translate-y-2 hover:border-[#a52a4c]/40"
+                    >
+
+                        <div
+                            class="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-[#a52a4c]/15 text-2xl"
+                        >
+                            🌤️
+                        </div>
+
+                        <p
+                            class="mt-6 font-['JetBrains_Mono'] text-[10px] tracking-[0.2em] text-[#d05a7c]"
+                        >
+                            PROJECT 04
+                        </p>
+
+                        <h3 class="mt-2 text-xl font-bold">
+                            Weather App
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-6 text-[#80606b]">
+                            Weather application using a REST API
+                            to retrieve and display real-time
+                            weather information.
+                        </p>
+
+                        <div class="mt-5 flex flex-wrap gap-2">
+
+                            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">
+                                JavaScript
+                            </span>
+
+                            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">
+                                REST API
+                            </span>
+
+                            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">
+                                JSON
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Face Recognition -->
+
+                    <article
+                        class="project-card group translate-y-10 rounded-3xl border border-white/10 bg-white/[0.055] p-7 opacity-0 shadow-2xl backdrop-blur-2xl transition-all duration-700 hover:-translate-y-2 hover:border-[#a52a4c]/40"
+                    >
+
+                        <div
+                            class="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-[#a52a4c]/15 text-2xl"
+                        >
+                            🤖
+                        </div>
+
+                        <p
+                            class="mt-6 font-['JetBrains_Mono'] text-[10px] tracking-[0.2em] text-[#d05a7c]"
+                        >
+                            PROJECT 05
+                        </p>
+
+                        <h3 class="mt-2 text-xl font-bold">
+                            Face Recognition Attendance
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-6 text-[#80606b]">
+                            Python-based attendance system using
+                            computer vision to identify users and
+                            record attendance.
+                        </p>
+
+                        <div class="mt-5 flex flex-wrap gap-2">
+
+                            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">
+                                Python
+                            </span>
+
+                            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">
+                                OpenCV
+                            </span>
+
+                            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">
+                                Computer Vision
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Chat -->
+
+                    <article
+                        class="project-card group translate-y-10 rounded-3xl border border-white/10 bg-white/[0.055] p-7 opacity-0 shadow-2xl backdrop-blur-2xl transition-all duration-700 hover:-translate-y-2 hover:border-[#a52a4c]/40"
+                    >
+
+                        <div
+                            class="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-[#a52a4c]/15 text-2xl"
+                        >
+                            💬
+                        </div>
+
+                        <p
+                            class="mt-6 font-['JetBrains_Mono'] text-[10px] tracking-[0.2em] text-[#d05a7c]"
+                        >
+                            PROJECT 06
+                        </p>
+
+                        <h3 class="mt-2 text-xl font-bold">
+                            Chat Application
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-6 text-[#80606b]">
+                            Database-driven chat application with
+                            authentication and messaging features.
+                        </p>
+
+                        <div class="mt-5 flex flex-wrap gap-2">
+
+                            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">
+                                PHP
+                            </span>
+
+                            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">
+                                MySQL
+                            </span>
+
+                            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">
+                                JavaScript
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Inventory -->
+
+                    <article
+                        class="project-card group translate-y-10 rounded-3xl border border-white/10 bg-white/[0.055] p-7 opacity-0 shadow-2xl backdrop-blur-2xl transition-all duration-700 hover:-translate-y-2 hover:border-[#a52a4c]/40"
+                    >
+
+                        <div
+                            class="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-[#a52a4c]/15 text-2xl"
+                        >
+                            📦
+                        </div>
+
+                        <p
+                            class="mt-6 font-['JetBrains_Mono'] text-[10px] tracking-[0.2em] text-[#d05a7c]"
+                        >
+                            PROJECT 07
+                        </p>
+
+                        <h3 class="mt-2 text-xl font-bold">
+                            Inventory Management
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-6 text-[#80606b]">
+                            Inventory system for products, categories,
+                            stock levels and reporting.
+                        </p>
+
+                        <div class="mt-5 flex flex-wrap gap-2">
+
+                            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">
+                                PHP
+                            </span>
+
+                            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">
+                                MySQL
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Cinema -->
+
+                    <article
+                        class="project-card group translate-y-10 rounded-3xl border border-white/10 bg-white/[0.055] p-7 opacity-0 shadow-2xl backdrop-blur-2xl transition-all duration-700 hover:-translate-y-2 hover:border-[#a52a4c]/40"
+                    >
+
+                        <div
+                            class="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-[#a52a4c]/15 text-2xl"
+                        >
+                            🎬
+                        </div>
+
+                        <p
+                            class="mt-6 font-['JetBrains_Mono'] text-[10px] tracking-[0.2em] text-[#d05a7c]"
+                        >
+                            PROJECT 08
+                        </p>
+
+                        <h3 class="mt-2 text-xl font-bold">
+                            Cinema Reservation
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-6 text-[#80606b]">
+                            Cinema reservation project using
+                            2D arrays for seat management.
+                        </p>
+
+                        <div class="mt-5 flex flex-wrap gap-2">
+
+                            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">
+                                Python
+                            </span>
+
+                            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs">
+                                2D Arrays
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Coming Soon -->
+
+                    <article
+                        class="project-card group translate-y-10 rounded-3xl border border-dashed border-[#a52a4c]/30 bg-[#a52a4c]/5 p-7 opacity-0 backdrop-blur-2xl transition-all duration-700 hover:bg-[#a52a4c]/10"
+                    >
+
+                        <div
+                            class="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#a52a4c]/20 bg-[#a52a4c]/10 text-2xl"
+                        >
+                            🚀
+                        </div>
+
+                        <p
+                            class="mt-6 font-['JetBrains_Mono'] text-[10px] tracking-[0.2em] text-[#d05a7c]"
+                        >
+                            NEXT
+                        </p>
+
+                        <h3 class="mt-2 text-xl font-bold">
+                            More Projects
+                        </h3>
+
+                        <p class="mt-3 text-sm leading-6 text-[#80606b]">
+                            More experiments and applications
+                            are currently being developed.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================================
+             CONTACT
+        ========================================================== -->
+
+        <section
+            id="contact"
+            class="scroll-reveal translate-y-12 px-6 py-24 opacity-0 transition-all duration-1000"
+        >
+
+            <div class="mx-auto max-w-5xl">
+
+                <div
+                    class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.06] p-10 text-center shadow-2xl shadow-black/30 backdrop-blur-2xl sm:p-16"
+                >
+
+                    <!-- Inner glow -->
+
+                    <div
+                        class="absolute left-1/2 top-0 h-40 w-96 -translate-x-1/2 rounded-full bg-[#a52a4c]/20 blur-[80px]"
+                    ></div>
+
+
+                    <div class="relative">
+
+                        <p
+                            class="font-['JetBrains_Mono'] text-xs tracking-[0.25em] text-[#d05a7c]"
+                        >
+                            04 / CONTACT
+                        </p>
+
+                        <h2
+                            class="mt-4 text-4xl font-bold sm:text-5xl"
+                        >
+                            Let's build something.
+                        </h2>
+
+                        <p
+                            class="mx-auto mt-5 max-w-xl leading-7 text-[#c9aab4]"
+                        >
+                            Have an idea, project or opportunity?
+                            Let's connect and turn it into something
+                            useful.
+                        </p>
+
+
+                        <div
+                            class="mt-8 flex flex-wrap justify-center gap-4"
+                        >
+
+                            <a
+                                href="mailto:your@email.com"
+                                class="rounded-xl border border-white/10 bg-gradient-to-br from-[#a52a4c] to-[#641329] px-7 py-3.5 font-semibold shadow-lg shadow-[#641329]/30 transition hover:-translate-y-1"
+                            >
+                                Email Me
+                            </a>
+
+                            <a
+                                href="#"
+                                class="rounded-xl border border-white/10 bg-white/5 px-7 py-3.5 font-semibold backdrop-blur-xl transition hover:-translate-y-1 hover:bg-[#a52a4c]/10"
+                            >
+                                GitHub
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer class="border-t border-white/10">
+
+        <div
+            class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 sm:flex-row"
+        >
+
+            <p class="text-sm text-[#80606b]">
+                © 2026 Daniel Mulay. All rights reserved.
+            </p>
+
+            <p
+                class="font-['JetBrains_Mono'] text-xs text-[#60434d]"
+            >
+                DESIGNED & BUILT WITH ♥
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         BACK TO TOP BUTTON
+    ========================================================== -->
+
+    <a
+        href="#"
+        id="backToTop"
+        aria-label="Back to top"
+        class="fixed bottom-6 right-6 z-50 flex h-12 w-12 translate-y-5 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.08] text-xl text-white opacity-0 shadow-2xl backdrop-blur-2xl transition-all duration-300 pointer-events-none hover:-translate-y-1 hover:border-[#a52a4c]/50 hover:bg-[#a52a4c]/20 hover:shadow-[#8b1e3f]/30"
+    >
+        ↑
+    </a>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script type="module">
+
+        import {
+            animate
+        } from "https://cdn.jsdelivr.net/npm/animejs/+esm";
+
+
+        /* =========================================================
+           HERO SCRAMBLE
+        ========================================================== */
+
+        const scrambleText =
+            document.querySelector("#scramble-text");
+
+
+        if (scrambleText) {
+
+            animate(scrambleText, {
+
+                text: {
+                    value:
+                        "A developer who enjoys creating websites and building modern digital experiences.",
+
+                    modifiers: {
+                        scramble: true
+                    }
+                },
+
+                duration: 2200,
+
+                ease: "inOutQuad"
+
+            });
+
+        }
+
+
+
+        /* =========================================================
+           SECTION SCROLL REVEAL
+        ========================================================== */
+
+        const sections =
+            document.querySelectorAll(".scroll-reveal");
+
+
+        const sectionObserver =
+            new IntersectionObserver(
+
+                (entries, observer) => {
+
+                    entries.forEach((entry) => {
+
+                        if (!entry.isIntersecting) return;
+
+
+                        entry.target.classList.remove(
+                            "opacity-0",
+                            "translate-y-12"
+                        );
+
+
+                        entry.target.classList.add(
+                            "opacity-100",
+                            "translate-y-0"
+                        );
+
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.15
+                }
+
+            );
+
+
+        sections.forEach((section) => {
+
+            sectionObserver.observe(section);
+
+        });
+
+
+
+        /* =========================================================
+           PROJECT CARD STAGGER
+        ========================================================== */
+
+        const projectCards =
+            document.querySelectorAll(".project-card");
+
+
+        const projects =
+            document.querySelector("#projects");
+
+
+        if (projects && projectCards.length) {
+
+            const cardObserver =
+                new IntersectionObserver(
+
+                    (entries, observer) => {
+
+                        entries.forEach((entry) => {
+
+                            if (!entry.isIntersecting) return;
+
+
+                            projectCards.forEach(
+                                (card, index) => {
+
+                                    setTimeout(() => {
+
+                                        card.classList.remove(
+                                            "opacity-0",
+                                            "translate-y-10"
+                                        );
+
+                                        card.classList.add(
+                                            "opacity-100",
+                                            "translate-y-0"
+                                        );
+
+                                    }, index * 100);
+
+                                }
+                            );
+
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        });
+
+                    },
+
+                    {
+                        threshold: 0.1
+                    }
+
+                );
+
+
+            cardObserver.observe(projects);
+
+        }
+
+
+
+        /* =========================================================
+           MOBILE MENU
+        ========================================================== */
+
+        const menuButton =
+            document.querySelector("#menuButton");
+
+        const mobileMenu =
+            document.querySelector("#mobileMenu");
+
+
+        if (menuButton && mobileMenu) {
+
+            menuButton.addEventListener(
+                "click",
+                () => {
+
+                    mobileMenu.classList.toggle(
+                        "hidden"
+                    );
+
+                }
+            );
+
+        }
+
+
+        document
+            .querySelectorAll(".mobile-link")
+            .forEach((link) => {
+
+                link.addEventListener(
+                    "click",
+                    () => {
+
+                        if (mobileMenu) {
+
+                            mobileMenu.classList.add(
+                                "hidden"
+                            );
+
+                        }
+
+                    }
+                );
+
+            });
+
+
+
+        /* =========================================================
+           SMOOTH SCROLL
+        ========================================================== */
+
+        document
+            .querySelectorAll('a[href^="#"]')
+            .forEach((link) => {
+
+                link.addEventListener(
+                    "click",
+                    (event) => {
+
+                        const href =
+                            link.getAttribute("href");
+
+
+                        /*
+                         * If href is simply "#",
+                         * scroll all the way to the top.
+                         */
+
+                        if (href === "#") {
+
+                            event.preventDefault();
+
+                            window.scrollTo({
+                                top: 0,
+                                behavior: "smooth"
+                            });
+
+                            return;
+
+                        }
+
+
+                        const target =
+                            document.querySelector(href);
+
+
+                        if (!target) return;
+
+
+                        event.preventDefault();
+
+
+                        target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+
+                    }
+                );
+
+            });
+
+
+
+        /* =========================================================
+           BACK TO TOP BUTTON
+        ========================================================== */
+
+        const backToTop =
+            document.querySelector("#backToTop");
+
+
+        if (backToTop) {
+
+            window.addEventListener(
+                "scroll",
+                () => {
+
+                    if (window.scrollY > 500) {
+
+                        backToTop.classList.remove(
+                            "opacity-0",
+                            "translate-y-5",
+                            "pointer-events-none"
+                        );
+
+                        backToTop.classList.add(
+                            "opacity-100",
+                            "translate-y-0",
+                            "pointer-events-auto"
+                        );
+
+                    } else {
+
+                        backToTop.classList.remove(
+                            "opacity-100",
+                            "translate-y-0",
+                            "pointer-events-auto"
+                        );
+
+                        backToTop.classList.add(
+                            "opacity-0",
+                            "translate-y-5",
+                            "pointer-events-none"
+                        );
+
+                    }
+
+                },
+                { passive: true }
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>
